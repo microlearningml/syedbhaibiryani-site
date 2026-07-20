@@ -99,16 +99,37 @@
 					</div>
 					<hr />
 					<h2 id="contact-form">Get in Touch</h2>
-					<p>We look forward to serving you.</p>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half"><label for="name">Name</label><input type="text" name="name" id="name" placeholder="Your full name" /></div>
-							<div class="field half"><label for="phone">Phone</label><input type="text" name="phone" id="phone" placeholder="Mobile number" /></div>
-							<div class="field"><label for="email">Email (optional)</label><input type="email" name="email" id="email" placeholder="you@example.com" /></div>
-							<div class="field"><label for="message">Your Order / Enquiry</label><textarea name="message" id="message" rows="4" placeholder="Tell us the items, quantity, date &amp; time, or any special request..."></textarea></div>
-						</div>
-						<ul class="actions"><li><input type="submit" value="Send Enquiry" class="primary" /></li></ul>
-					</form>
+<p>We look forward to serving you.</p>
+<form action="https://formspree.io/f/xwvgbaqv" method="POST">
+	<div class="fields">
+		<div class="field half">
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" placeholder="Your full name" required />
+		</div>
+		<div class="field half">
+			<label for="phone">Phone</label>
+			<input type="text" name="phone" id="phone" placeholder="Mobile number" required />
+		</div>
+		<div class="field">
+			<label for="email">Email (optional)</label>
+			<input type="email" name="email" id="email" placeholder="you@example.com" />
+		</div>
+		<div class="field">
+			<label for="message">Your Order / Enquiry</label>
+			<textarea name="message" id="message" rows="4" placeholder="Tell us the items, quantity, date & time, or any special request..." required></textarea>
+		</div>
+	</div>
+
+	<!-- Optional: Redirect after successful submission -->
+	<input type="hidden" name="_next" value="https://www.syedbhai.com/generic.html?success=1" />
+	
+	<!-- Optional: Subject of the email you receive -->
+	<input type="hidden" name="_subject" value="New Enquiry from Syed Bhai Biryani Website" />
+
+	<ul class="actions">
+		<li><input type="submit" value="Send Enquiry" class="primary" /></li>
+	</ul>
+</form>
 					<hr />
 					<h2>Visit Us Today</h2>
 					<p><strong>Syed Bhai Biryani</strong><br />Traditional Wedding Style Dum Biryani</p>
