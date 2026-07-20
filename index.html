@@ -268,25 +268,30 @@
 			</div>
 			<footer id="footer">
 				<section>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" placeholder="Your full name" />
-							</div>
-							<div class="field">
-								<label for="email">Email / Phone</label>
-								<input type="text" name="email" id="email" placeholder="you@example.com or mobile number" />
-							</div>
-							<div class="field">
-								<label for="message">Message / Bulk Order Enquiry</label>
-								<textarea name="message" id="message" rows="3" placeholder="Tell us about your order, party size or special request..."></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" class="primary" /></li>
-						</ul>
-					</form>
+					<form action="https://formspree.io/f/xwvgbaqv" method="POST">
+	<div class="fields">
+		<div class="field">
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" placeholder="Your full name" required />
+		</div>
+		<div class="field">
+			<label for="email">Email / Phone</label>
+			<input type="text" name="email" id="email" placeholder="you@example.com or mobile number" required />
+		</div>
+		<div class="field">
+			<label for="message">Message / Bulk Order Enquiry</label>
+			<textarea name="message" id="message" rows="3" placeholder="Tell us about your order, party size or special request..." required></textarea>
+		</div>
+	</div>
+
+	<!-- Optional settings -->
+	<input type="hidden" name="_subject" value="New Enquiry from Syed Bhai Biryani Website" />
+	<input type="hidden" name="_next" value="https://www.syedbhai.com/?success=1" />
+
+	<ul class="actions">
+		<li><input type="submit" value="Send Message" class="primary" /></li>
+	</ul>
+</form>
 				</section>
 				<section class="split contact">
 					<section class="alt">
